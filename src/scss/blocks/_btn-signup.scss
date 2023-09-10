@@ -1,0 +1,22 @@
+.btn-signup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 20px;
+	border-radius: 8px;
+	border: 1px solid var(--text-color);
+	background: var(--text-color);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 450;
+	line-height: 150%;
+	color: var(--page-bg);
+	transition: all 0.2s ease-in-out;
+
+	&:hover,
+	&:focus {
+		background: var(--accent);
+		color: var(--text-color);
+		border: 1px solid var(--accent);
+	}
+}

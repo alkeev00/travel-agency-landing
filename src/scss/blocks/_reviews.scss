@@ -1,0 +1,16 @@
+.reviews {
+	padding: 30px 0;
+}
+.container {
+}
+.reviews__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 32px;
+	@include LaptopMedia() {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+}
+
+.reviews__card {
+}

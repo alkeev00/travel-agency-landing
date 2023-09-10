@@ -1,0 +1,23 @@
+.scroll-down {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.scroll-down__text {
+	animation: scroll-down-rotation 15s linear infinite;
+}
+.scroll-down__icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes scroll-down-rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

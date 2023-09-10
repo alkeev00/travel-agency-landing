@@ -1,0 +1,30 @@
+.partners {
+	padding: 60px 0;
+}
+
+.partners__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	@include LaptopMedia() {
+		flex-direction: column;
+	}
+}
+
+.partners__title {
+	color: var(--text-grey);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.partners__list {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	@include LaptopMedia() {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

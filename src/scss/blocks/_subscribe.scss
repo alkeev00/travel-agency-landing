@@ -1,0 +1,110 @@
+.subscribe {
+	background: var(--accent);
+	color: var(--page-bg);
+	overflow: hidden;
+}
+
+.subscribe__row {
+	padding: 80px 24px 80px 180px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+
+	@include tabletMedia() {
+		flex-direction: column;
+	}
+
+	@media (max-width: 620px) {
+		padding: 80px 24px 80px 24px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: -80px;
+		top: -30px;
+		width: 236px;
+		height: 273px;
+
+		background-image: url('./../img/subscribe/subscribe-pin-bg.svg');
+		background-repeat: no-repeat;
+		@include tabletMedia() {
+			left: -80px;
+			top: 50px;
+		}
+		@media (max-width: 620px) {
+			background-image: url('');
+		}
+	}
+}
+
+.subscribe__desc {
+	.subscribe__title {
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		@include LaptopMedia() {
+			font-size: 22px;
+		}
+		@include tabletMedia() {
+			text-align: center;
+		}
+	}
+	.subscribe__subtitle {
+		color: #f0f0f0;
+		margin-top: 4px;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 450;
+		line-height: normal;
+		@include LaptopMedia() {
+			font-size: 18px;
+		}
+		@include tabletMedia() {
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+}
+
+.subscribe__form {
+	.subscribe-form {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		@media (max-width: 860px) {
+			flex-direction: column;
+		}
+	}
+	.subscribe-form__input {
+		align-items: center;
+		padding: 14px 12px 10px 44px;
+		color: var(--text-color);
+		border-radius: 8px;
+		border: 1px solid #fff;
+		background: var(--White, #fff);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 450;
+		line-height: 150%;
+
+		background-image: url('./../img/icons/email.svg');
+		background-position: 12px 11px;
+		background-size: auto;
+		background-repeat: no-repeat;
+
+		&::placeholder {
+			color: var(--text-grey);
+		}
+	}
+	.subscribe-form__btn {
+		padding: 14px 24px;
+
+		border-radius: 8px;
+		background: #181818;
+	}
+}

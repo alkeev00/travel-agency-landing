@@ -1,0 +1,92 @@
+.discover {
+	padding: 60px 0;
+}
+
+.discover__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 80px;
+	align-items: center;
+	@include tabletMedia() {
+		grid-template-columns: 1fr;
+	}
+}
+
+.discover__title {
+	margin-bottom: 24px;
+	@include tabletMedia() {
+		text-align: center;
+	}
+}
+
+.discover__text {
+	margin-bottom: 40px;
+	@include tabletMedia() {
+		text-align: center;
+	}
+}
+
+.discover__picture {
+	position: relative;
+
+	@include tabletMedia() {
+		display: block;
+		margin: 0 auto;
+	}
+	@media (max-width: 450px) {
+		display: none;
+	}
+}
+
+.discover__picture-img {
+	max-width: 100%;
+}
+
+.discover__form {
+	@media (max-width: 600px) {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.discover__picture-hint {
+	position: absolute;
+	bottom: 75%;
+	right: 40%;
+	@media (max-width: 1172px) {
+		bottom: 75%;
+		right: 35%;
+	}
+	@media (max-width: 1120px) {
+		bottom: 75%;
+		right: 30%;
+	}
+	@media (max-width: 1092px) {
+		bottom: 75%;
+		right: 25%;
+	}
+	@media (max-width: 1064px) {
+		bottom: 75%;
+		right: 10%;
+	}
+	@include tabletMedia() {
+		right: 40%;
+	}
+	@media (max-width: 600px) {
+		bottom: 75%;
+		right: 20%;
+	}
+	@media (max-width: 450px) {
+		bottom: 65%;
+		right: 0%;
+	}
+}
+
+.discover__picture-scroll {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	@media (max-width: 450px) {
+		display: none;
+	}
+}
