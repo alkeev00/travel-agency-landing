@@ -1,0 +1,116 @@
+.popup-signup__wrapper {
+	width: 100%;
+	height: 100%;
+	background: rgba(#181818, 0.7);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	display: none;
+}
+
+.popup-signup__overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	left: 0;
+	top: 0;
+}
+
+.popup-signup__wrapper.active {
+	display: block;
+}
+
+.popup-signup .popup-signup__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	width: 350px;
+	height: 470px;
+	z-index: 3;
+	text-align: center;
+	padding: 12px;
+	border-radius: 10px;
+	background: var(--page-bg);
+	box-shadow: 0px 4px 10px 0px rgba(23, 28, 31, 0.23);
+
+	h2 {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 600;
+		padding-top: 50px;
+		padding-bottom: 20px;
+		color: var(--accent);
+	}
+	.popup-signup__have-account {
+		font-weight: 600;
+		color: var(--accent);
+	}
+	p {
+		color: var(--text-color);
+		padding: 20px;
+	}
+	.popup-signup__input-field .validate {
+		padding: 14px;
+		font-size: 16px;
+		border-radius: 8px;
+		border: none;
+		margin-bottom: 15px;
+		color: var(--text-color);
+		background: #ffffff;
+		border: 1px solid rgb(196, 196, 196);
+		width: 270px;
+		outline: none;
+	}
+	.popup-signup__second-button {
+		color: var(--page-bg);
+		font-size: 18px;
+		font-weight: 500;
+		margin-top: 20px;
+		padding: 14px 50px;
+		border-radius: 8px;
+		border: none;
+		background: var(--text-color);
+		transition: box-shadow 0.35s ease !important;
+		outline: none;
+	}
+	.popup-signup__second-button:active {
+		background: linear-gradient(145deg, #222222, #292929);
+		border: none;
+		outline: none;
+	}
+}
+
+.popup-signup .popup-signup__close-btn {
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	width: 30px;
+	height: 30px;
+	border-radius: 8px;
+	padding: 2px 5px 7px 5px;
+	cursor: pointer;
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 2px;
+
+		border-radius: 7px;
+		background-color: var(--text-color);
+	}
+	&::before {
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
+}
